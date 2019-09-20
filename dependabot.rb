@@ -22,7 +22,7 @@ credentials = [
 
 credentials << {
   "type" => "git_source",
-  "region" => ENV["AWS_REGION"],
+  "region" => ENV["AWS_DEFAULT_REGION"],
   "username" => ENV["AWS_ACCESS_KEY_ID"],
   "password" => ENV["AWS_SECRET_ACCESS_KEY"]
 }
