@@ -32,6 +32,7 @@ module Custom
         @cc_client = Aws::CodeCommit::Client.new(
           access_key_id: credentials&.fetch("username"),
           secret_access_key: credentials&.fetch("password"),
+          session_token: ENV['AWS_SESSION_TOKEN'],
           region: credentials&.fetch("region")
         )
       end
